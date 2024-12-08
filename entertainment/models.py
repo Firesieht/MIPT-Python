@@ -1,7 +1,13 @@
 from django.db import models
 from session1.models import Prostranstvo, Event, MoneyEvent, EventType, Location
 
+
 class ProstranstvoProxy(Prostranstvo):
+    """
+    Прокси-модель для Пространств.
+
+    Используется для управления пространствами в админ-панели.
+    """
     class Meta:
         proxy = True
         verbose_name = 'Пространство'
@@ -9,6 +15,11 @@ class ProstranstvoProxy(Prostranstvo):
 
 
 class EventProxy(Event):
+    """
+    Прокси-модель для Мероприятий.
+
+    Позволяет управлять мероприятиями в админ-панели.
+    """
     class Meta:
         proxy = True
         verbose_name = 'Мероприятие'
@@ -16,13 +27,23 @@ class EventProxy(Event):
 
 
 class EventTypeProxy(EventType):
+    """
+    Прокси-модель для Типов Мероприятий.
+
+    Используется для управления типами мероприятий в админ-панели.
+    """
     class Meta:
         proxy = True
         verbose_name = 'Тип мероприятия'
-        verbose_name_plural = 'Типы меропритий'
+        verbose_name_plural = 'Типы мероприятий'
 
 
 class MoneyEventProxy(MoneyEvent):
+    """
+    Прокси-модель для Установки Цен на Билеты.
+
+    Позволяет управлять установкой цен на билеты в админ-панели.
+    """
     class Meta:
         proxy = True
         verbose_name = 'Установка цен на билеты'
@@ -30,6 +51,11 @@ class MoneyEventProxy(MoneyEvent):
 
 
 class LocationProxy(Location):
+    """
+    Прокси-модель для Локаций.
+
+    Используется для управления локациями в админ-панели.
+    """
     class Meta:
         proxy = True
         verbose_name = 'Локация'

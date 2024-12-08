@@ -1,0 +1,47 @@
+# Игнорирование файлов кэша и других ненужных файлов
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Виртуальные окружения
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3-journal
+
+# Покрытие кода
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Статические и медиа-файлы
+staticfiles/
+media/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Другие
+*.swp
